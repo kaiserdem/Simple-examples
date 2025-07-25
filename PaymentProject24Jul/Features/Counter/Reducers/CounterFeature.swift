@@ -20,6 +20,7 @@ struct CounterFeature {
         var showErrroAlert: Bool = false
         var errorMessage: String? = nil
         var step: Int = 1
+        var isLogoutIn: Bool = false
     }
     
     enum Action {
@@ -33,6 +34,7 @@ struct CounterFeature {
         case dismissErrorAlert
         case addToHistory(Int)
         case setStep(Int)
+        case setLogout
     }
     
     @Dependency(\.continuousClock) var clock
@@ -121,6 +123,10 @@ struct CounterFeature {
         case .dismissErrorAlert:
             state.errorMessage = nil
             state.showErrroAlert = false
+            return .none
+            
+        case .setLogout:
+            state.isLogoutIn = true
             return .none
         }
     }

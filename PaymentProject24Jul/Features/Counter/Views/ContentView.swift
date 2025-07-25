@@ -15,6 +15,12 @@ struct CounterView: View {
     var body: some View {
         VStack {
             
+            Button("Logout") {
+                store.send(.setLogout)
+            }
+            
+            Spacer()
+            
             Text(store.history.description)
                 .frame(height: 50)
             
@@ -58,6 +64,8 @@ struct CounterView: View {
             }
             .padding()
             .border(store.isTimerRunning ? .red : .green)
+            
+            Spacer()
         }
         .padding()
         .alert("Error", isPresented: Binding(

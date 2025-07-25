@@ -12,8 +12,8 @@ import ComposableArchitecture
 struct PaymentProject24JulApp: App {
     var body: some Scene {
         WindowGroup {
-            ImageListView(store: Store(initialState: ImageFeature.State(), reducer: {
-                ImageFeature()
+            CoreView(store: Store(initialState: CoreFeature.State(), reducer: {
+                CoreFeature()
             }))
         }
     }
