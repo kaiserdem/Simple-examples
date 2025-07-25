@@ -1,15 +1,9 @@
-//
-//  TabFeature.swift
-//  PaymentProject24Jul
-//
-//  Created by Yaroslav Golinskiy on 25/07/2025.
-//
 
 import SwiftUI
 import ComposableArchitecture
 
 enum Tab {
-    case counter, images
+    case counter, images, titles
 }
 
 @Reducer
@@ -20,12 +14,14 @@ struct TabFeature {
         var selectedTab: Tab = .counter
         var counterState: CounterFeature.State = .init()
         var imagesState: ImageFeature.State = .init()
+        var titlesState: TitleFeature.State = .init()
     }
     
-    enum  Action {
+    enum Action {
         case setSelectedTab(Tab)
         case counterAction(CounterFeature.Action)
         case imagesAction(ImageFeature.Action)
+        case titlesAction(TitleFeature.Action)
     }
     
     var body: some Reducer <State, Action> {
@@ -42,6 +38,10 @@ struct TabFeature {
             case .imagesAction(let action):
                 let counterReature = ImageFeature().reduce(into: &state.imagesState, action: action)
                 return counterReature.map { .imagesAction($0)}
+                
+            case .titlesAction(let action):
+                let counterReature = TitleFeature().reduce(into: &state.titlesState, action: action)
+                return counterReature.map { .titlesAction($0)}
             }
         }
     }

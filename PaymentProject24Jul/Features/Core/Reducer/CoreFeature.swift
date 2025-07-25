@@ -1,9 +1,3 @@
-//
-//  CoreFeature.swift
-//  PaymentProject24Jul
-//
-//  Created by Yaroslav Golinskiy on 25/07/2025.
-//
 
 import SwiftUI
 import ComposableArchitecture
@@ -13,7 +7,7 @@ struct CoreFeature {
     
     @ObservableState
     struct State: Equatable {
-        var isLoggedIn: Bool = false
+        var isLoggedIn: Bool = true
         var loginState: LoginFeature.State = .init()
         var tabState: TabFeature.State = .init()
     }

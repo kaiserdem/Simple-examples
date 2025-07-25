@@ -1,9 +1,3 @@
-//
-//  ImageEffects.swift
-//  PaymentProject24Jul
-//
-//  Created by Yaroslav Golinskiy on 25/07/2025.
-//
 
 import SwiftUI
 import Foundation
@@ -11,7 +5,7 @@ import ComposableArchitecture
 
 protocol ImageApi {
     func downloadImage(_ withUrl: URL) async throws -> UIImage
-   // func downloadImages(_ withUrls: [URL]) async throws -> [UIImage]
+    func downloadImages(_ withUrls: [URL]) async throws -> [UIImage]
 }
 
 
@@ -28,17 +22,29 @@ struct ImageEffects: ImageApi {
         } catch {
             throw NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey : "Error downloading request with url: \(withUrl)"])
         }
-                            
-
-            
-//        } catch {
-//           throw NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey : "Error downloading with url: \(withUrl)"])
-//        }
     }
     
-//    func downloadImages(_ withUrls: [URL]) async throws -> [UIImage] {
-//        
-//    }
+    func downloadImages(_ withUrls: [URL]) async throws -> [UIImage] {
+        do {
+            return try await withThrowingTaskGroup(of: UIImage.self) { group in
+                
+                var images:[UIImage] = []
+                
+                for url in withUrls {
+                    group.addTask {
+                       try await downloadImage(url)
+                    }
+                }
+                
+                for try await image in group {
+                    images.append(image)
+                }
+                return images
+            }
+        } catch {
+            throw NSError(domain: "", code: 1, userInfo: [NSLocalizedDescriptionKey : "Error downloading images"])
+        }
+    }
 }
 
 enum ImageEffectsKey: DependencyKey {

@@ -1,9 +1,3 @@
-//
-//  ImageFeature.swift
-//  PaymentProject24Jul
-//
-//  Created by Yaroslav Golinskiy on 25/07/2025.
-//
 
 import SwiftUI
 import ComposableArchitecture
@@ -15,11 +9,15 @@ struct ImageFeature {
     @ObservableState
     struct State: Equatable {
         var images: [ImageItem] = []
+        var isLoading: Bool = false
     }
     
     enum Action {
         case downloadImage
         case downloadCompletion(UIImage)
+        case downloadGroupImages
+        case downloadGroupCompletion([UIImage])
+
         case downloadError(Error)
     }
     
@@ -41,9 +39,26 @@ struct ImageFeature {
                     }
                 }
             )
+            
+        case .downloadGroupImages:
+            state.isLoading = true
+            return .run { send in
+                do {
+                    let images = try await imageEffect.downloadImages(ImagesContainer.imageData)
+                    await send(.downloadGroupCompletion(images))
+                } catch {
+                    await send(.downloadError(error))
+                }
+                
+            }
      
         case .downloadCompletion(let image):
             state.images.append(ImageItem(image: image))
+            return .none
+            
+        case .downloadGroupCompletion(let images):
+            state.isLoading = false
+            state.images = images.map { ImageItem(image: $0)}
             return .none
             
         case .downloadError(let error):
