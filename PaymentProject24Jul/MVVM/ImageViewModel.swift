@@ -1,9 +1,3 @@
-//
-//  ImageViewModel.swift
-//  PaymentProject24Jul
-//
-//  Created by Yaroslav Golinskiy on 26/07/2025.
-//
 
 import SwiftUI
 import Dependencies
