@@ -39,14 +39,14 @@ struct CounterView: View {
             
             
             HStack {
-                Button("+") {
+                Button("Income") {
                     store.send(.increment)
                 }
                 .padding()
                 .border(.gray)
                 
                 
-                Button("-") {
+                Button("Credit") {
                     store.send(.decrement)
                 }
                 .padding()
