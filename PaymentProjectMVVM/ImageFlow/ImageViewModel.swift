@@ -1,9 +1,12 @@
 
 import SwiftUI
 import Dependencies
+import Combine
 
 class ImageViewModel: ObservableObject {
      @Published var images: [UIImage] = []
+    private var cancellables = Set<AnyCancellable>()
+
     
     @Dependency(\.imageManager) var imageManager
     
@@ -42,4 +45,21 @@ class ImageViewModel: ObservableObject {
             
         }
     }
+    
+    func downloadImagesWithPublishers(urls: [URL]) {
+            let publishers = urls.map { url in
+                URLSession.shared.dataTaskPublisher(for: url)
+                    .map(\.data)
+                    .compactMap { UIImage(data: $0) }
+                    .replaceError(with: nil)
+                    .compactMap { $0 }
+            }
+            
+            Publishers.MergeMany(publishers)
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] image in
+                    self?.images.append(image)
+                }
+                .store(in: &cancellables)
+        }
 }

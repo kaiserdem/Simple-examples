@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		058566062E350E0100F0A2D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 058566052E350E0100F0A2D6 /* ComposableArchitecture */; };
+		058566232E35C68300F0A2D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 058566222E35C68300F0A2D6 /* ComposableArchitecture */; };
 		05A0F2012E31EA8C0063A555 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05A0F2002E31EA8C0063A555 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,19 @@
 			remoteGlobalIDString = 058565F02E35092E00F0A2D6;
 			remoteInfo = PaymentProjectMVVM;
 		};
+		0585661C2E35C66900F0A2D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A0F1E92E31E9A60063A555 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A0F1F02E31E9A60063A555;
+			remoteInfo = PaymentProjectTCA;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentProjectMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		058566182E35C66900F0A2D6 /* PaymentProjectTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentProjectTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -46,6 +55,11 @@
 		0585660C2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PaymentProjectMVVMTests;
+			sourceTree = "<group>";
+		};
+		058566192E35C66900F0A2D6 /* PaymentProjectTCATests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PaymentProjectTCATests;
 			sourceTree = "<group>";
 		};
 		05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */ = {
@@ -74,6 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		058566152E35C66900F0A2D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				058566232E35C68300F0A2D6 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1EE2E31E9A60063A555 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,12 +107,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		058566212E35C68300F0A2D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		05A0F1E82E31E9A60063A555 = {
 			isa = PBXGroup;
 			children = (
 				05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */,
 				058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */,
 				0585660C2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
+				058566192E35C66900F0A2D6 /* PaymentProjectTCATests */,
+				058566212E35C68300F0A2D6 /* Frameworks */,
 				05A0F1F22E31E9A60063A555 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +132,7 @@
 				05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */,
 				058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */,
 				0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */,
+				058566182E35C66900F0A2D6 /* PaymentProjectTCATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +186,30 @@
 			productReference = 0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		058566172E35C66900F0A2D6 /* PaymentProjectTCATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0585661E2E35C66900F0A2D6 /* Build configuration list for PBXNativeTarget "PaymentProjectTCATests" */;
+			buildPhases = (
+				058566142E35C66900F0A2D6 /* Sources */,
+				058566152E35C66900F0A2D6 /* Frameworks */,
+				058566162E35C66900F0A2D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0585661D2E35C66900F0A2D6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				058566192E35C66900F0A2D6 /* PaymentProjectTCATests */,
+			);
+			name = PaymentProjectTCATests;
+			packageProductDependencies = (
+				058566222E35C68300F0A2D6 /* ComposableArchitecture */,
+			);
+			productName = PaymentProjectTCATests;
+			productReference = 058566182E35C66900F0A2D6 /* PaymentProjectTCATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05A0F1FC2E31E9A90063A555 /* Build configuration list for PBXNativeTarget "PaymentProjectTCA" */;
@@ -194,6 +250,10 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 058565F02E35092E00F0A2D6;
 					};
+					058566172E35C66900F0A2D6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 05A0F1F02E31E9A60063A555;
+					};
 					05A0F1F02E31E9A60063A555 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -219,6 +279,7 @@
 				05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */,
 				058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */,
 				0585660A2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
+				058566172E35C66900F0A2D6 /* PaymentProjectTCATests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +293,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		058566092E35BE9D00F0A2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		058566162E35C66900F0A2D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,6 +330,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		058566142E35C66900F0A2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1ED2E31E9A60063A555 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +351,11 @@
 			isa = PBXTargetDependency;
 			target = 058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */;
 			targetProxy = 0585660F2E35BE9D00F0A2D6 /* PBXContainerItemProxy */;
+		};
+		0585661D2E35C66900F0A2D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */;
+			targetProxy = 0585661C2E35C66900F0A2D6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -365,6 +445,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentProjectMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaymentProjectMVVM";
+			};
+			name = Release;
+		};
+		0585661F2E35C66900F0A2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectTCATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentProjectTCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaymentProjectTCA";
+			};
+			name = Debug;
+		};
+		058566202E35C66900F0A2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectTCATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentProjectTCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaymentProjectTCA";
 			};
 			name = Release;
 		};
@@ -572,6 +686,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0585661E2E35C66900F0A2D6 /* Build configuration list for PBXNativeTarget "PaymentProjectTCATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0585661F2E35C66900F0A2D6 /* Debug */,
+				058566202E35C66900F0A2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05A0F1EC2E31E9A60063A555 /* Build configuration list for PBXProject "PaymentProject24Jul" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -605,6 +728,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		058566052E350E0100F0A2D6 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		058566222E35C68300F0A2D6 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
