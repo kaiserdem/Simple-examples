@@ -7,7 +7,7 @@ class ImageViewModel: ObservableObject {
     
     @Dependency(\.imageManager) var imageManager
     
-    init() {
+    func downloadLinearly() {
         
         ImagesContainer.imageData.forEach { url in
             
@@ -22,6 +22,24 @@ class ImageViewModel: ObservableObject {
                     print("Errror: \(error.localizedDescription), withUrl: \(url.absoluteString)")
                 }
             }
+        }
+    }
+    
+    func downloadGroup() {
+        imageManager.downloadImages(urls: ImagesContainer.imageData) {  [weak self] result in
+            
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let allImages):
+                DispatchQueue.main.async {
+                    self.images = allImages
+                }
+                
+            case .failure(let error):
+                print("Errror: \(error.localizedDescription)")
+            }
+            
         }
     }
 }

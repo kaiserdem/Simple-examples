@@ -7,22 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058566062E350E0100F0A2D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 058566052E350E0100F0A2D6 /* ComposableArchitecture */; };
 		05A0F2012E31EA8C0063A555 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05A0F2002E31EA8C0063A555 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05A0F1F12E31E9A60063A555 /* PaymentProject24Jul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProject24Jul.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		058566042E350BD600F0A2D6 /* Exceptions for "PaymentProjectTCA" folder in "PaymentProjectMVVM" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Features/Images/Models/ImagesContainer.swift,
+			);
+			target = 058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		05A0F1F32E31E9A60063A555 /* PaymentProject24Jul */ = {
+		058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PaymentProject24Jul;
+			path = PaymentProjectMVVM;
+			sourceTree = "<group>";
+		};
+		05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				058566042E350BD600F0A2D6 /* Exceptions for "PaymentProjectTCA" folder in "PaymentProjectMVVM" target */,
+			);
+			path = PaymentProjectTCA;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		058565EE2E35092E00F0A2D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				058566062E350E0100F0A2D6 /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1EE2E31E9A60063A555 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,7 +65,8 @@
 		05A0F1E82E31E9A60063A555 = {
 			isa = PBXGroup;
 			children = (
-				05A0F1F32E31E9A60063A555 /* PaymentProject24Jul */,
+				05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */,
+				058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */,
 				05A0F1F22E31E9A60063A555 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,7 +74,8 @@
 		05A0F1F22E31E9A60063A555 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05A0F1F12E31E9A60063A555 /* PaymentProject24Jul.app */,
+				05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */,
+				058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,9 +83,32 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05A0F1F02E31E9A60063A555 /* PaymentProject24Jul */ = {
+		058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05A0F1FC2E31E9A90063A555 /* Build configuration list for PBXNativeTarget "PaymentProject24Jul" */;
+			buildConfigurationList = 058565F92E35093000F0A2D6 /* Build configuration list for PBXNativeTarget "PaymentProjectMVVM" */;
+			buildPhases = (
+				058565ED2E35092E00F0A2D6 /* Sources */,
+				058565EE2E35092E00F0A2D6 /* Frameworks */,
+				058565EF2E35092E00F0A2D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */,
+			);
+			name = PaymentProjectMVVM;
+			packageProductDependencies = (
+				058566052E350E0100F0A2D6 /* ComposableArchitecture */,
+			);
+			productName = PaymentProjectMVVM;
+			productReference = 058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A0F1FC2E31E9A90063A555 /* Build configuration list for PBXNativeTarget "PaymentProjectTCA" */;
 			buildPhases = (
 				05A0F1ED2E31E9A60063A555 /* Sources */,
 				05A0F1EE2E31E9A60063A555 /* Frameworks */,
@@ -66,14 +119,14 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				05A0F1F32E31E9A60063A555 /* PaymentProject24Jul */,
+				05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */,
 			);
-			name = PaymentProject24Jul;
+			name = PaymentProjectTCA;
 			packageProductDependencies = (
 				05A0F2002E31EA8C0063A555 /* ComposableArchitecture */,
 			);
 			productName = PaymentProject24Jul;
-			productReference = 05A0F1F12E31E9A60063A555 /* PaymentProject24Jul.app */;
+			productReference = 05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -86,6 +139,9 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					058565F02E35092E00F0A2D6 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					05A0F1F02E31E9A60063A555 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -108,12 +164,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05A0F1F02E31E9A60063A555 /* PaymentProject24Jul */,
+				05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */,
+				058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		058565EF2E35092E00F0A2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1EF2E31E9A60063A555 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +188,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		058565ED2E35092E00F0A2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1ED2E31E9A60063A555 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,6 +205,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		058565FA2E35093000F0A2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		058565FB2E35093000F0A2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectMVVM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		05A0F1FA2E31E9A90063A555 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -273,7 +398,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProject24Jul;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectTCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -305,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProject24Jul;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectTCA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -320,6 +445,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		058565F92E35093000F0A2D6 /* Build configuration list for PBXNativeTarget "PaymentProjectMVVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058565FA2E35093000F0A2D6 /* Debug */,
+				058565FB2E35093000F0A2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05A0F1EC2E31E9A60063A555 /* Build configuration list for PBXProject "PaymentProject24Jul" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -329,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05A0F1FC2E31E9A90063A555 /* Build configuration list for PBXNativeTarget "PaymentProject24Jul" */ = {
+		05A0F1FC2E31E9A90063A555 /* Build configuration list for PBXNativeTarget "PaymentProjectTCA" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05A0F1FD2E31E9A90063A555 /* Debug */,
@@ -352,6 +486,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		058566052E350E0100F0A2D6 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
 		05A0F2002E31EA8C0063A555 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

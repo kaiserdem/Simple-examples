@@ -5,7 +5,7 @@ import SwiftUI
 
 protocol ImageApiCompletion {
     func downloadImage(url: URL, completion: @escaping(Result<UIImage, Error>) -> Void)
-    //func downloadImagew(urls: [URL], completion: @escaping(Result<[UIImage], Error>))
+    func downloadImages(urls: [URL], completion: @escaping(Result<[UIImage], Error>) -> Void)
 }
 
 
@@ -28,6 +28,29 @@ struct ImageManager: ImageApiCompletion {
         
         task.resume()
     }
+    
+    
+    func downloadImages(urls: [URL], completion: @escaping(Result<[UIImage], Error>) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        var images: [UIImage] = []
+        
+        for url in urls {
+            
+            dispatchGroup.enter()
+            
+            downloadImage(url: url) { result in
+                dispatchGroup.leave()
+                if case.success(let image) = result {
+                    images.append(image)
+                }
+            }
+            
+            dispatchGroup.notify(queue: .main) {
+                completion(.success(images))
+            }
+        }
+    }
+
     
 }
 
