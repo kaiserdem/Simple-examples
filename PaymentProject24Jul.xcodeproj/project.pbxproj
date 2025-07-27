@@ -11,8 +11,19 @@
 		05A0F2012E31EA8C0063A555 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05A0F2002E31EA8C0063A555 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0585660F2E35BE9D00F0A2D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A0F1E92E31E9A60063A555 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 058565F02E35092E00F0A2D6;
+			remoteInfo = PaymentProjectMVVM;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentProjectMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -30,6 +41,11 @@
 		058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = PaymentProjectMVVM;
+			sourceTree = "<group>";
+		};
+		0585660C2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PaymentProjectMVVMTests;
 			sourceTree = "<group>";
 		};
 		05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */ = {
@@ -51,6 +67,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		058566082E35BE9D00F0A2D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1EE2E31E9A60063A555 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,6 +90,7 @@
 			children = (
 				05A0F1F32E31E9A60063A555 /* PaymentProjectTCA */,
 				058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */,
+				0585660C2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
 				05A0F1F22E31E9A60063A555 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +100,7 @@
 			children = (
 				05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */,
 				058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */,
+				0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +130,29 @@
 			productName = PaymentProjectMVVM;
 			productReference = 058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0585660A2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 058566112E35BE9D00F0A2D6 /* Build configuration list for PBXNativeTarget "PaymentProjectMVVMTests" */;
+			buildPhases = (
+				058566072E35BE9D00F0A2D6 /* Sources */,
+				058566082E35BE9D00F0A2D6 /* Frameworks */,
+				058566092E35BE9D00F0A2D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				058566102E35BE9D00F0A2D6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0585660C2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
+			);
+			name = PaymentProjectMVVMTests;
+			packageProductDependencies = (
+			);
+			productName = PaymentProjectMVVMTests;
+			productReference = 0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */ = {
 			isa = PBXNativeTarget;
@@ -142,6 +190,10 @@
 					058565F02E35092E00F0A2D6 = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					0585660A2E35BE9D00F0A2D6 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 058565F02E35092E00F0A2D6;
+					};
 					05A0F1F02E31E9A60063A555 = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -166,12 +218,20 @@
 			targets = (
 				05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */,
 				058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */,
+				0585660A2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		058565EF2E35092E00F0A2D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		058566092E35BE9D00F0A2D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,6 +255,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		058566072E35BE9D00F0A2D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05A0F1ED2E31E9A60063A555 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +270,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		058566102E35BE9D00F0A2D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */;
+			targetProxy = 0585660F2E35BE9D00F0A2D6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		058565FA2E35093000F0A2D6 /* Debug */ = {
@@ -256,6 +331,40 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		058566122E35BE9D00F0A2D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentProjectMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaymentProjectMVVM";
+			};
+			name = Debug;
+		};
+		058566132E35BE9D00F0A2D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.PaymentProjectMVVMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PaymentProjectMVVM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PaymentProjectMVVM";
 			};
 			name = Release;
 		};
@@ -450,6 +559,15 @@
 			buildConfigurations = (
 				058565FA2E35093000F0A2D6 /* Debug */,
 				058565FB2E35093000F0A2D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		058566112E35BE9D00F0A2D6 /* Build configuration list for PBXNativeTarget "PaymentProjectMVVMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				058566122E35BE9D00F0A2D6 /* Debug */,
+				058566132E35BE9D00F0A2D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
