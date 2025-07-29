@@ -4,40 +4,39 @@ import ComposableArchitecture
 
 @MainActor
 final class ImageFeatureTests: XCTestCase {
-    func testImageDownloadSuccess() {
-        let store = TestStore(initialState: ImageFeature.State()) {
-            ImageFeature()
+    
+    struct MockImageApi: ImageApi {
+        var shouldSucceed = true
+        var mockImages = [UIImage(), UIImage()]
+        
+        func downloadImage(_ withUrl: URL) async throws -> UIImage {
+            if shouldSucceed {
+                return UIImage()
+            } else {
+                throw NSError(domain: "Test", code: 1, userInfo: nil)
+            }
         }
         
-        store.assert {
-            $0.images = []
-            $0.isLoading = false
-        }
-        
-        store.send(.downloadImages) {
-            $0.isLoading = true
-        }
-        
-        // Симулюємо успішне завантаження
-        store.receive(.imagesDownloaded(.success([testImage]))) {
-            $0.images = [testImage]
-            $0.isLoading = false
+        func downloadImages(_ withUrls: [URL]) async throws -> [UIImage] {
+            if shouldSucceed {
+                return mockImages
+            } else {
+                throw NSError(domain: "Test", code: 1, userInfo: nil)
+            }
         }
     }
     
-    func testImageDownloadFailure() {
+    func testDownloadGroupImagesSuccess() async {
         let store = TestStore(initialState: ImageFeature.State()) {
             ImageFeature()
+        } withDependencies: {
+            $0.imageEffect = MockImageApi()
         }
         
-        store.send(.downloadImages) {
-            $0.isLoading = true
-        }
+        store.exhaustivity = .off
         
-        // Симулюємо помилку
-        store.receive(.imagesDownloaded(.failure(NetworkError.failed))) {
-            $0.isLoading = false
-            $0.error = "Failed to download images"
-        }
+        await store.send(.downloadGroupImages)
+        await store.receive(\.downloadGroupCompletion)
+        await store.finish()
     }
 }

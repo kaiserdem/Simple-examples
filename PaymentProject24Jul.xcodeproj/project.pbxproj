@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		058566062E350E0100F0A2D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 058566052E350E0100F0A2D6 /* ComposableArchitecture */; };
-		058566232E35C68300F0A2D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 058566222E35C68300F0A2D6 /* ComposableArchitecture */; };
 		05A0F2012E31EA8C0063A555 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05A0F2002E31EA8C0063A555 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058566232E35C68300F0A2D6 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +202,6 @@
 			);
 			name = PaymentProjectTCATests;
 			packageProductDependencies = (
-				058566222E35C68300F0A2D6 /* ComposableArchitecture */,
 			);
 			productName = PaymentProjectTCATests;
 			productReference = 058566182E35C66900F0A2D6 /* PaymentProjectTCATests.xctest */;
@@ -728,11 +725,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		058566052E350E0100F0A2D6 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
-		};
-		058566222E35C68300F0A2D6 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
