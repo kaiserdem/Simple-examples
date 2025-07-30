@@ -11,7 +11,7 @@ import SwiftUI
 struct PaymentProjectMVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            ImagesListView()
+            MainTabView()
         }
     }
 }

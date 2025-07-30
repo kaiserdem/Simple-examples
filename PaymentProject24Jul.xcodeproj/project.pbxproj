@@ -40,6 +40,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Features/Images/Models/ImagesContainer.swift,
+				Features/Titles/Models/TitleData.swift,
 			);
 			target = 058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */;
 		};

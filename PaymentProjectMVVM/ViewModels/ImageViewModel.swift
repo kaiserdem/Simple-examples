@@ -9,6 +9,8 @@ class ImageViewModel: ObservableObject {
 
     
     @Dependency(\.imageManager) var imageManager
+    @Dependency(\.imageProManager) var imageProManager
+
     
     func downloadLinearly() {
         
@@ -43,6 +45,21 @@ class ImageViewModel: ObservableObject {
                 print("Errror: \(error.localizedDescription)")
             }
             
+        }
+    }
+    func downloadImagesPRO() {
+        imageProManager.downloadImages(urls: ImagesContainer.imageData) {[weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let allImages):
+                DispatchQueue.main.async {
+                    self.images = allImages
+                }
+                
+            case .failure(let error):
+                print("Errror: \(error.localizedDescription)")
+            }
         }
     }
     
