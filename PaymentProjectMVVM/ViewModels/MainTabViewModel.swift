@@ -19,7 +19,7 @@ class MainTabViewModel: ObservableObject {
 }
 enum ImagesRoute: Hashable {
     case imagesList
-    case imageDetail
+    case imageDetail(index: Int)
 }
 
 

@@ -39,6 +39,7 @@
 		058566042E350BD600F0A2D6 /* Exceptions for "PaymentProjectTCA" folder in "PaymentProjectMVVM" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Features/Images/Models/ImageItem.swift,
 				Features/Images/Models/ImagesContainer.swift,
 				Features/Titles/Models/TitleData.swift,
 			);

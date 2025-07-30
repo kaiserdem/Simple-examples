@@ -13,14 +13,18 @@ struct MainTabView: View {
     var body: some View {
         TabView(selection: $viewModel.selectedTab) {
             ImagesListView()
+                .environmentObject(viewModel)
+
                 .tabItem {
                     Text("Images")
                 }.tag(MainTab.images)
             
             TitlesListView()
+                .environmentObject(viewModel)
                 .tabItem {
                     Text("Titles")
                 }.tag(MainTab.titles)
+            
         }
     }
 }

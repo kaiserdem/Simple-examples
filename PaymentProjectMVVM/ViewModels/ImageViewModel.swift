@@ -4,7 +4,7 @@ import Dependencies
 import Combine
 
 class ImageViewModel: ObservableObject {
-     @Published var images: [UIImage] = []
+    @Published var images: [UIImage] = []
     private var cancellables = Set<AnyCancellable>()
 
     
