@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		058566062E350E0100F0A2D6 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 058566052E350E0100F0A2D6 /* ComposableArchitecture */; };
 		05A0F2012E31EA8C0063A555 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05A0F2002E31EA8C0063A555 /* ComposableArchitecture */; };
+		05C8FAB82E3AEA2900857C8D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 05C8FAB72E3AEA2900857C8D /* ComposableArchitecture */; };
+		05C8FADF2E3AFC0D00857C8D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C8FADE2E3AFC0D00857C8D /* XCTest.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,13 @@
 			remoteGlobalIDString = 05A0F1F02E31E9A60063A555;
 			remoteInfo = PaymentProjectTCA;
 		};
+		05C8FAC32E3AF7D900857C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A0F1E92E31E9A60063A555 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05C8FAAB2E3AEA1200857C8D;
+			remoteInfo = TestProjectTCA;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +42,9 @@
 		0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentProjectMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		058566182E35C66900F0A2D6 /* PaymentProjectTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaymentProjectTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaymentProjectTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C8FAAC2E3AEA1200857C8D /* TestProjectTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProjectTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C8FABF2E3AF7D900857C8D /* TestProjectTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C8FADE2E3AFC0D00857C8D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -71,6 +83,16 @@
 			path = PaymentProjectTCA;
 			sourceTree = "<group>";
 		};
+		05C8FAAD2E3AEA1200857C8D /* TestProjectTCA */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestProjectTCA;
+			sourceTree = "<group>";
+		};
+		05C8FAC02E3AF7D900857C8D /* TestProjectTCATests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestProjectTCATests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +126,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05C8FAA92E3AEA1200857C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C8FAB82E3AEA2900857C8D /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C8FABC2E3AF7D900857C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05C8FADF2E3AFC0D00857C8D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		058566212E35C68300F0A2D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05C8FADE2E3AFC0D00857C8D /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,6 +160,8 @@
 				058565F22E35092E00F0A2D6 /* PaymentProjectMVVM */,
 				0585660C2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
 				058566192E35C66900F0A2D6 /* PaymentProjectTCATests */,
+				05C8FAAD2E3AEA1200857C8D /* TestProjectTCA */,
+				05C8FAC02E3AF7D900857C8D /* TestProjectTCATests */,
 				058566212E35C68300F0A2D6 /* Frameworks */,
 				05A0F1F22E31E9A60063A555 /* Products */,
 			);
@@ -133,6 +174,8 @@
 				058565F12E35092E00F0A2D6 /* PaymentProjectMVVM.app */,
 				0585660B2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests.xctest */,
 				058566182E35C66900F0A2D6 /* PaymentProjectTCATests.xctest */,
+				05C8FAAC2E3AEA1200857C8D /* TestProjectTCA.app */,
+				05C8FABF2E3AF7D900857C8D /* TestProjectTCATests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +275,52 @@
 			productReference = 05A0F1F12E31E9A60063A555 /* PaymentProjectTCA.app */;
 			productType = "com.apple.product-type.application";
 		};
+		05C8FAAB2E3AEA1200857C8D /* TestProjectTCA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C8FAB62E3AEA1400857C8D /* Build configuration list for PBXNativeTarget "TestProjectTCA" */;
+			buildPhases = (
+				05C8FAA82E3AEA1200857C8D /* Sources */,
+				05C8FAA92E3AEA1200857C8D /* Frameworks */,
+				05C8FAAA2E3AEA1200857C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				05C8FAAD2E3AEA1200857C8D /* TestProjectTCA */,
+			);
+			name = TestProjectTCA;
+			packageProductDependencies = (
+				05C8FAB72E3AEA2900857C8D /* ComposableArchitecture */,
+			);
+			productName = TestProjectTCA;
+			productReference = 05C8FAAC2E3AEA1200857C8D /* TestProjectTCA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05C8FABE2E3AF7D900857C8D /* TestProjectTCATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05C8FAC52E3AF7D900857C8D /* Build configuration list for PBXNativeTarget "TestProjectTCATests" */;
+			buildPhases = (
+				05C8FABB2E3AF7D900857C8D /* Sources */,
+				05C8FABC2E3AF7D900857C8D /* Frameworks */,
+				05C8FABD2E3AF7D900857C8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05C8FAC42E3AF7D900857C8D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				05C8FAC02E3AF7D900857C8D /* TestProjectTCATests */,
+			);
+			name = TestProjectTCATests;
+			packageProductDependencies = (
+			);
+			productName = TestProjectTCATests;
+			productReference = 05C8FABF2E3AF7D900857C8D /* TestProjectTCATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,6 +345,13 @@
 					05A0F1F02E31E9A60063A555 = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					05C8FAAB2E3AEA1200857C8D = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					05C8FABE2E3AF7D900857C8D = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 05C8FAAB2E3AEA1200857C8D;
+					};
 				};
 			};
 			buildConfigurationList = 05A0F1EC2E31E9A60063A555 /* Build configuration list for PBXProject "PaymentProject24Jul" */;
@@ -279,6 +375,8 @@
 				058565F02E35092E00F0A2D6 /* PaymentProjectMVVM */,
 				0585660A2E35BE9D00F0A2D6 /* PaymentProjectMVVMTests */,
 				058566172E35C66900F0A2D6 /* PaymentProjectTCATests */,
+				05C8FAAB2E3AEA1200857C8D /* TestProjectTCA */,
+				05C8FABE2E3AF7D900857C8D /* TestProjectTCATests */,
 			);
 		};
 /* End PBXProject section */
@@ -306,6 +404,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		05A0F1EF2E31E9A60063A555 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C8FAAA2E3AEA1200857C8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C8FABD2E3AF7D900857C8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,6 +455,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		05C8FAA82E3AEA1200857C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05C8FABB2E3AF7D900857C8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -355,6 +481,11 @@
 			isa = PBXTargetDependency;
 			target = 05A0F1F02E31E9A60063A555 /* PaymentProjectTCA */;
 			targetProxy = 0585661C2E35C66900F0A2D6 /* PBXContainerItemProxy */;
+		};
+		05C8FAC42E3AF7D900857C8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05C8FAAB2E3AEA1200857C8D /* TestProjectTCA */;
+			targetProxy = 05C8FAC32E3AF7D900857C8D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -664,6 +795,98 @@
 			};
 			name = Release;
 		};
+		05C8FAB42E3AEA1400857C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.TestProjectTCA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05C8FAB52E3AEA1400857C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.TestProjectTCA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		05C8FAC62E3AF7D900857C8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.TestProjectTCATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProjectTCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestProjectTCA";
+			};
+			name = Debug;
+		};
+		05C8FAC72E3AF7D900857C8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.TestProjectTCATests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProjectTCA.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestProjectTCA";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -712,6 +935,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		05C8FAB62E3AEA1400857C8D /* Build configuration list for PBXNativeTarget "TestProjectTCA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C8FAB42E3AEA1400857C8D /* Debug */,
+				05C8FAB52E3AEA1400857C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05C8FAC52E3AF7D900857C8D /* Build configuration list for PBXNativeTarget "TestProjectTCATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C8FAC62E3AF7D900857C8D /* Debug */,
+				05C8FAC72E3AF7D900857C8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -732,6 +973,11 @@
 			productName = ComposableArchitecture;
 		};
 		05A0F2002E31EA8C0063A555 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		05C8FAB72E3AEA2900857C8D /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 05A0F1FF2E31EA8C0063A555 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
