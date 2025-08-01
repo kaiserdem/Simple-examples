@@ -12,8 +12,8 @@ import ComposableArchitecture
 struct TestProjectTCAApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView(store: Store(initialState: TabFeature.State(), reducer: {
-                TabFeature()
+            CoreView(store: Store(initialState: CoreFeature.State(), reducer: {
+                CoreFeature()
             }))
         }
     }

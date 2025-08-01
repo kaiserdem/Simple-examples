@@ -18,6 +18,9 @@ struct ImageView: View {
             }
             .frame(maxWidth: .infinity)
             .border(.fill)
+            if store.isloading {
+                ProgressView()
+            }
             ScrollView {
                 // LazyVGrid(columns: [GridItem(.adaptive(minimum: 70, maximum: 120),spacing: 20)]) {
                 ForEach(store.images.indices, id: \.self) { index in
@@ -42,6 +45,7 @@ struct ImageFeature {
     @ObservableState
     struct State: Equatable {
         var images: [UIImage] = []
+        var isloading: Bool = false
     }
     
     enum Action {
@@ -55,6 +59,7 @@ struct ImageFeature {
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
         case .download:
+            state.isloading = true
             guard let url = URL(string: "https://picsum.photos/200/300") else {
                 return .none
             }
@@ -69,10 +74,12 @@ struct ImageFeature {
             }
             
         case .downloadCompletion(let image):
-            state.images.append(image)
+            state.images.insert(image, at: 0)
+            state.isloading = false
             return .none
             
         case .downloadErrror(let error):
+            state.isloading = false
             print("Error: \(error)")
             return .none
         }
